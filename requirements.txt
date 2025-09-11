@@ -1,0 +1,23 @@
+# Framework RAG
+llama-index==0.10.0
+llama-index-llms-ollama==0.1.0
+llama-index-embeddings-ollama==0.1.0
+
+# Vector Store
+faiss-cpu==1.7.4
+
+# PDF Processing
+PyPDF2==3.0.1
+pymupdf==1.23.0
+
+# Data Processing
+pandas==2.1.0
+numpy==1.24.0
+
+# Ollama Client
+ollama==0.2.0
+
+# Utilities
+python-dotenv==1.0.0
+tqdm>=4.64.0
+colorama==0.4.6

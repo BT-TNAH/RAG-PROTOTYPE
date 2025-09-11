@@ -285,12 +285,12 @@ class RAGPrototype:
             # Validation du format des noms de fichiers
             valid_pattern_count = 0
             for pdf_file in pdf_files:
-                if "ELCA" in pdf_file.name and "entretien" in pdf_file.name:
+                if "XXXX" in pdf_file.name and "entretien" in pdf_file.name:
                     valid_pattern_count += 1
             
             if valid_pattern_count < len(pdf_files) * 0.8:
                 self.logger.warning(
-                    "Certains fichiers PDF ne respectent pas le format attendu (ELCA_*_entretien_*)"
+                    "Certains fichiers PDF ne respectent pas le format attendu (XXXX_*_entretien_*)"
                 )
             
             self.logger.info(f"Dossier data/ validé : {len(pdf_files)} fichiers PDF trouvés")

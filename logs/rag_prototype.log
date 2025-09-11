@@ -1,0 +1,672 @@
+PS C:\Users\BenedicteTuza\Documents\RAG-prototype> git push origin proto
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 5.26 KiB | 598.00 KiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 5 local objects.
+To https://github.com/LSDCDDMP/RAG-prototype.git
+   ac3baea..063c974  proto -> proto
+PS C:\Users\BenedicteTuza\Documents\RAG-prototype> & C:/Users/BenedicteTuza/.conda/envs/prototype/python.exe c:/Users/BenedicteTuza/Documents/RAG-prototype/src/main.py
+2025-09-04 11:57:13,425 - __main__ - INFO - Répertoire du script : c:\Users\BenedicteTuza\Documents\RAG-prototype\src
+2025-09-04 11:57:13,425 - __main__ - INFO - Racine du projet : c:\Users\BenedicteTuza\Documents\RAG-prototype
+2025-09-04 11:57:13,425 - __main__ - INFO - Dossier data : c:\Users\BenedicteTuza\Documents\RAG-prototype\data
+2025-09-04 11:57:13,425 - __main__ - INFO - Fichier questions : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions.csv
+
+######################################################################
+##                                                                  ##
+##                  PROTOTYPE RAG - XXXX                            ##
+##          Archives Orales d'Histoire d'Entreprise                 ##
+##                                                                  ##
+######################################################################
+
+📚 Corpus : 19 transcriptions d'entretiens PDF
+🔍 Technologies : LlamaIndex + Ollama + Faiss
+⚙️  Architecture : RAG Naïve modulaire
+
+🕐 Session démarrée le : 04/09/2025 à 11:57:13
+----------------------------------------------------------------------
+
+🔍 Validation des dépendances en cours...
+  → Vérification d'Ollama... ✅ OK
+2025-09-04 11:57:14,119 - __main__ - INFO - Dossier data/ validé : 19 fichiers PDF trouvés
+  → Validation du dossier data/... ✅ OK
+2025-09-04 11:57:14,127 - __main__ - INFO - Fichier CSV lu avec succès
+2025-09-04 11:57:14,127 - __main__ - INFO - Colonnes trouvées dans le CSV: ['Numero_identifiant', 'Question', 'Interet_scientifique_question', 'Typologie_question', 'Source_ideale_chercheuse', 'Reponse_ideale_chercheuse']
+2025-09-04 11:57:14,127 - __main__ - INFO - Fichier questions.csv validé avec succès
+  → Vérification du fichier questions.csv... ✅ OK
+  → Test des modules Python... ✅ OK
+
+✅ Toutes les dépendances sont satisfaites !
+
+============================================================
+           MENU PRINCIPAL - PROTOTYPE RAG ELCA
+============================================================
+1. Mode Évaluation (28 questions de test)
+   → Traitement automatisé du fichier questions.csv
+   → Évaluation de différents paramétrages
+
+2. Mode Chatbot (questions libres)
+   → Interface interactive en ligne de commande
+   → Questions libres sur le corpus d'archives
+
+3. Quitter le programme
+============================================================
+
+Veuillez choisir un mode (1, 2 ou 3) : 3
+Au revoir !
+PS C:\Users\BenedicteTuza\Documents\RAG-prototype> ollama pull nomic-embed-text:latest
+pulling manifest
+pulling 970aa74c0a90... 100% ▕████████████████████████████████████████████████████████████████████████████████████████████▏ 274 MB
+pulling c71d239df917... 100% ▕████████████████████████████████████████████████████████████████████████████████████████████▏  11 KB
+pulling ce4a164fc046... 100% ▕████████████████████████████████████████████████████████████████████████████████████████████▏   17 B
+pulling 31df23ea7daa... 100% ▕████████████████████████████████████████████████████████████████████████████████████████████▏  420 B
+verifying sha256 digest
+writing manifest
+success
+PS C:\Users\BenedicteTuza\Documents\RAG-prototype> & C:/Users/BenedicteTuza/.conda/envs/prototype/python.exe c:/Users/BenedicteTuza/Documents/RAG-prototype/src/main.py
+2025-09-04 11:57:38,229 - __main__ - INFO - Répertoire du script : c:\Users\BenedicteTuza\Documents\RAG-prototype\src
+2025-09-04 11:57:38,229 - __main__ - INFO - Racine du projet : c:\Users\BenedicteTuza\Documents\RAG-prototype
+2025-09-04 11:57:38,229 - __main__ - INFO - Dossier data : c:\Users\BenedicteTuza\Documents\RAG-prototype\data
+2025-09-04 11:57:38,229 - __main__ - INFO - Fichier questions : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions.csv
+
+######################################################################
+##                                                                  ##
+##                  PROTOTYPE RAG - XXXX                            ##
+##          Archives Orales d'Histoire d'Entreprise                 ##
+##                                                                  ##
+######################################################################
+
+📚 Corpus : 19 transcriptions d'entretiens PDF
+🔍 Technologies : LlamaIndex + Ollama + Faiss
+⚙️  Architecture : RAG Naïve modulaire
+
+🕐 Session démarrée le : 04/09/2025 à 11:57:38
+----------------------------------------------------------------------
+
+🔍 Validation des dépendances en cours...
+  → Vérification d'Ollama... ✅ OK
+2025-09-04 11:57:38,675 - __main__ - INFO - Dossier data/ validé : 19 fichiers PDF trouvés
+  → Validation du dossier data/... ✅ OK
+2025-09-04 11:57:38,682 - __main__ - INFO - Fichier CSV lu avec succès
+2025-09-04 11:57:38,682 - __main__ - INFO - Colonnes trouvées dans le CSV: ['Numero_identifiant', 'Question', 'Interet_scientifique_question', 'Typologie_question', 'Source_ideale_chercheuse', 'Reponse_ideale_chercheuse']
+2025-09-04 11:57:38,683 - __main__ - INFO - Fichier questions.csv validé avec succès
+  → Vérification du fichier questions.csv... ✅ OK
+  → Test des modules Python... ✅ OK
+
+✅ Toutes les dépendances sont satisfaites !
+
+============================================================
+           MENU PRINCIPAL - PROTOTYPE RAG XXXX
+============================================================
+1. Mode Évaluation (28 questions de test)
+   → Traitement automatisé du fichier questions.csv
+   → Évaluation de différents paramétrages
+
+2. Mode Chatbot (questions libres)
+   → Interface interactive en ligne de commande
+   → Questions libres sur le corpus d'archives
+
+3. Quitter le programme
+============================================================
+
+Veuillez choisir un mode (1, 2 ou 3) : 1
+
+🔬 Lancement du Mode Évaluation
+==================================================
+
+============================================================
+           CONFIGURATION DES PARAMÈTRES RAG
+============================================================
+Veuillez sélectionner vos paramètres pour cette session d'évaluation.
+
+🔊 SÉLECTION DU MODÈLE LLM
+------------------------------
+1. llama3.1:latest (recommandé - déjà testé)
+2. llama3.3 (option secondaire)
+
+Votre choix (1-2) : 1
+✅ Modèle sélectionné : llama3.1:latest
+
+📃 SÉLECTION DE LA TAILLE DES CHUNKS
+----------------------------------------
+Petits chunks (phrase/petit paragraphe) :
+  1. 250    2. 300    3. 400
+
+Chunks moyens (paragraphe moyen/grand) :
+  4. 500    5. 600
+
+Grands chunks (page) :
+  6. 700    7. 800    8. 900    9. 1000    10. 2000
+
+Votre choix (1-10) : 2
+✅ Taille de chunk sélectionnée : 300
+
+🔄 SÉLECTION DU CHUNK OVERLAP
+-----------------------------------
+Overlap nul :
+  1. 0
+
+Petit overlap (pour phrases) :
+  2. 10     3. 20     4. 30
+
+Overlap moyen (pour paragraphes) :
+  5. 50     6. 60     7. 70     8. 80     9. 90     10. 100
+
+Grand overlap (pour pages) :
+  11. 800    12. 2000
+
+Votre choix (1-12) : 2
+✅ Chunk overlap sélectionné : 10
+
+🧮 SÉLECTION DU MODÈLE D'EMBEDDING
+----------------------------------------
+1. nomic-embed-text:latest (recommandé - déjà testé)
+2. bge-large:latest
+3. granite-embedding
+4. all-minilm:l6-v2
+
+Votre choix (1-4) : 1
+✅ Modèle d'embedding sélectionné : nomic-embed-text:latest
+
+🔍 SÉLECTION DU SIMILARITY TOP-K
+-----------------------------------
+Petites valeurs :
+  1. 3      2. 4      3. 5
+
+Grandes valeurs :
+  4. 20     5. 30     6. 40     7. 50
+
+Votre choix (1-7) : 1
+✅ Similarity Top-K sélectionné : 3
+DIAGNOSTIC - similarity_top_k: 3
+DIAGNOSTIC - embedding_model: nomic-embed-text:latest
+DIAGNOSTIC - chunk_size: 300
+
+============================================================
+           RÉCAPITULATIF DE LA CONFIGURATION
+============================================================
+🤖 Modèle LLM           : llama3.1:latest
+📃 Taille des chunks    : 300
+🔄 Chunk overlap        : 10
+🧮 Modèle d'embedding   : nomic-embed-text:latest
+🔍 Similarity Top-K     : 3
+============================================================
+
+Confirmer cette configuration ? (o/n) : o
+✅ Configuration confirmée !
+🔧 Initialisation des composants RAG...
+2025-09-04 11:58:56,281 - processing.chunking - INFO - ChunkingProcessor initialisé - taille: 300, overlap: 10
+2025-09-04 11:58:56,281 - processing.embedding - INFO - Initialisation du client Ollama pour le modèle nomic-embed-text:latest
+2025-09-04 11:58:58,428 - processing.embedding - INFO - Modèle d'embedding trouvé : nomic-embed-text:latest
+2025-09-04 11:58:58,428 - processing.embedding - INFO - Client Ollama initialisé avec succès
+✅ Composants RAG initialisés avec succès
+   📊 Batch size pour embeddings: 75
+   ⏱️  Délai entre batches: 0.05s
+📚 Chargement et traitement des documents...
+2025-09-04 11:58:58,430 - data_loading.pdf_loader - INFO - Recherche des fichiers PDF dans c:\Users\BenedicteTuza\Documents\RAG-prototype\data
+2025-09-04 11:58:58,433 - data_loading.pdf_loader - INFO - Trouvé 19 fichiers PDF à traiter
+DIAGNOSTIC - Loaded: 20240610_XXXX_Prénom1_Nom1_entretien_FR.pdf, 76614 chars
+2025-09-04 11:58:58,791 - data_loading.pdf_loader - INFO - Chargé: 20240610_XXXX_Prénom1_Nom1_entretien_FR.pdf (22 pages, Prénom1 Nom1)
+DIAGNOSTIC - Loaded: 20240610_XXXX_Prénom2_Nom2_entretien_FR.pdf, 62557 chars
+2025-09-04 11:58:59,070 - data_loading.pdf_loader - INFO - Chargé: 20240610_XXXX_Prénom2_Nom2_entretien_FR.pdf (20 pages, Prénom2 Nom2)
+DIAGNOSTIC - Loaded: 20240611_XXXX_Prénom3_Nom3_entretien_FR.pdf, 48818 chars
+2025-09-04 11:58:59,297 - data_loading.pdf_loader - INFO - Chargé: 20240611_XXXX_Prénom3_Nom3_entretien_FR.pdf (16 pages, Prénom3 Nom3)
+DIAGNOSTIC - Loaded: 20240611_XXXX_Prénom4_Nom4_entretien_FR.pdf, 75958 chars
+2025-09-04 11:58:59,632 - data_loading.pdf_loader - INFO - Chargé: 20240611_XXXX_Prénom4_Nom4_entretien_FR.pdf (18 pages, Prénom4 Nom4)
+DIAGNOSTIC - Loaded: 20240611_XXXX_Prénom5_Nom5_entretien_FR.pdf, 74128 chars
+2025-09-04 11:58:59,946 - data_loading.pdf_loader - INFO - Chargé: 20240611_XXXX_Prénom5_Nom5_entretien_FR.pdf (19 pages, Prénom5 Nom5)
+DIAGNOSTIC - Loaded: 20240611_XXXX_Prénom6_Nom6_entretien_AN.pdf, 45557 chars
+2025-09-04 11:59:00,156 - data_loading.pdf_loader - INFO - Chargé: 20240611_XXXX_Prénom6_Nom6_entretien_AN.pdf (14 pages, Prénom6 Nom6)
+DIAGNOSTIC - Loaded: 20240626_XXXX_Prénom7_Nom7_entretien_FR.pdf, 57422 chars
+2025-09-04 11:59:00,438 - data_loading.pdf_loader - INFO - Chargé: 20240626_XXXX_Prénom7_Nom7_entretien_FR.pdf (17 pages, Prénom7 Nom7)
+DIAGNOSTIC - Loaded: 20240626_XXXX_Prénom8_Nom8_entretien_FR.pdf, 63956 chars
+2025-09-04 11:59:00,718 - data_loading.pdf_loader - INFO - Chargé: 20240626_XXXX_Prénom8_Nom8_entretien_FR.pdf (18 pages, Prénom8 Nom8)
+DIAGNOSTIC - Loaded: 20240626_XXXX_Prénom9_Nom9_entretien_AN.pdf, 48630 chars
+2025-09-04 11:59:00,947 - data_loading.pdf_loader - INFO - Chargé: 20240626_XXXX_Prénom9_Nom9_entretien_AN.pdf (14 pages, Prénom9 Nom9)
+DIAGNOSTIC - Loaded: 20240627_XXXX_Prénom10_Nom10_entretien_FR.pdf, 80297 chars
+2025-09-04 11:59:01,287 - data_loading.pdf_loader - INFO - Chargé: 20240627_ELCA_Prénom10_Nom10_entretien_FR.pdf (24 pages, Prénom10 Nom10)
+DIAGNOSTIC - Loaded: 20240627_XXXX_Prénom11_Nom11_entretien_FR.pdf, 55685 chars
+2025-09-04 11:59:01,565 - data_loading.pdf_loader - INFO - Chargé: 20240627_XXXX_Prénom11_Nom11_entretien_FR.pdf (19 pages, Prénom11 Nom11)
+DIAGNOSTIC - Loaded: 20240628_XXXX_Prénom12_Nom12_entretien_FR.pdf, 57375 chars
+2025-09-04 11:59:01,848 - data_loading.pdf_loader - INFO - Chargé: 20240628_XXXX_Prénom12_Nom12_entretien_FR.pdf (21 pages, Prénom12 Nom12)
+DIAGNOSTIC - Loaded: 20240628_XXXX_Prénom13_Nom13_entretien_FR.pdf, 54093 chars
+2025-09-04 11:59:02,102 - data_loading.pdf_loader - INFO - Chargé: 20240628_XXXX_Prénom13_Nom13_entretien_FR.pdf (18 pages, Prénom13 Nom13)
+DIAGNOSTIC - Loaded: 20241002_XXXX_Prénom14_Nom14_entretien_FR.pdf, 56698 chars
+2025-09-04 11:59:02,361 - data_loading.pdf_loader - INFO - Chargé: 20241002_XXXX_Prénom14_Nom14_entretien_FR.pdf (20 pages, Prénom14 Nom14)
+DIAGNOSTIC - Loaded: 20241002_XXXX_Prénom15_Nom15_entretien_FR.pdf, 58849 chars
+2025-09-04 11:59:02,635 - data_loading.pdf_loader - INFO - Chargé: 20241002_XXXX_Prénom15_Nom15_entretien_FR.pdf (17 pages, Prénom15 Nom15)
+DIAGNOSTIC - Loaded: 20241002_XXXX_Prénom16_Nom16_entretien_FR.pdf, 24689 chars
+2025-09-04 11:59:02,771 - data_loading.pdf_loader - INFO - Chargé: 20241002_XXXX_Prénom16_Nom16_entretien_FR.pdf (8 pages, Prénom16 Nom16)
+DIAGNOSTIC - Loaded: 20241002_XXXX_Prénom17_Nom17_entretien_FR.pdf, 43800 chars
+2025-09-04 11:59:02,969 - data_loading.pdf_loader - INFO - Chargé: 20241002_XXXX_Prénom17_Nom17_entretien_FR.pdf (14 pages, Prénom17 Nom17)
+DIAGNOSTIC - Loaded: 20241003_XXXX_Prénom18_Nom18_entretien_FR.pdf, 58611 chars
+2025-09-04 11:59:03,257 - data_loading.pdf_loader - INFO - Chargé: 20241003_XXXX_Prénom18_Nom18_entretien_FR.pdf (21 pages, Prénom18 Nom18)
+DIAGNOSTIC - Loaded: 20241003_XXXX_Prénom19_Nom19_entretien_AN.pdf, 42275 chars
+2025-09-04 11:59:03,453 - data_loading.pdf_loader - INFO - Chargé: 20241003_XXXX_Prénom19_Nom19_entretien_AN.pdf (12 pages, Prénom19 Nom19)
+2025-09-04 11:59:03,453 - data_loading.pdf_loader - INFO - Chargement terminé: 19 documents prêts
+DIAGNOSTIC - Documents loaded: 19
+DIAGNOSTIC - Total characters loaded: 1086012
+📄 19 documents chargés
+2025-09-04 11:59:03,453 - processing.chunking - INFO - Début du chunking de 19 documents
+DIAGNOSTIC - Document 20240610_XXXX_Prénom1_Nom1_entretien_FR.pdf: 271 chunks created
+DIAGNOSTIC - Document 20240610_XXXX_Prénom2_Nom2_entretien_FR.pdf: 221 chunks created
+DIAGNOSTIC - Document 20240611_XXXX_Prénom3_Nom3_entretien_FR.pdf: 175 chunks created
+DIAGNOSTIC - Document 20240611_XXXX_Prénom4_Nom4_entretien_FR.pdf: 269 chunks created
+DIAGNOSTIC - Document 20240611_XXXX_Prénom5_Nom5_entretien_FR.pdf: 261 chunks created
+DIAGNOSTIC - Document 20240611_XXXX_Prénom6_Nom6_entretien_AN.pdf: 162 chunks created
+DIAGNOSTIC - Document 20240626_XXXX_Prénom7_Nom7_entretien_FR.pdf: 203 chunks created
+DIAGNOSTIC - Document 20240626_XXXX_Prénom8_Nom8_entretien_FR.pdf: 225 chunks created
+DIAGNOSTIC - Document 20240626_XXXX_Prénom9_Nom9_entretien_AN.pdf: 173 chunks created
+DIAGNOSTIC - Document 20240627_XXXX_Prénom10_Nom10_entretien_FR.pdf: 282 chunks created
+DIAGNOSTIC - Document 20240627_XXXX_Prénom11_Nom11_entretien_FR.pdf: 196 chunks created
+DIAGNOSTIC - Document 20240628_XXXX_Prénom12_Nom12_entretien_FR.pdf: 202 chunks created
+DIAGNOSTIC - Document 20240628_XXXX_Prénom13_Nom13_entretien_FR.pdf: 190 chunks created
+DIAGNOSTIC - Document 20241002_XXXX_Prénom14_Nom14_entretien_FR.pdf: 200 chunks created
+DIAGNOSTIC - Document 20241002_XXXX_Prénom15_Nom15_entretien_FR.pdf: 208 chunks created
+DIAGNOSTIC - Document 20241002_XXXX_Prénom16_Nom16_entretien_FR.pdf: 88 chunks created
+DIAGNOSTIC - Document 20241002_XXXX_Prénom17_Nom17_entretien_FR.pdf: 155 chunks created
+DIAGNOSTIC - Document 20241003_XXXX_Prénom18_Nom18_entretien_FR.pdf: 207 chunks created
+DIAGNOSTIC - Document 20241003_XXXX_Prénom19_Nom19_entretien_AN.pdf: 150 chunks created
+2025-09-04 11:59:03,687 - processing.chunking - INFO - Chunking terminé - 3838 chunks créés au total
+DIAGNOSTIC - Total chunks created: 3838
+DIAGNOSTIC - First chunk length: 238
+DIAGNOSTIC - Last chunk length: 197
+🔪 3838 chunks créés
+2025-09-04 11:59:03,689 - processing.embedding - INFO - Génération des embeddings pour 3838 chunks (batch_size: 75)
+2025-09-04 11:59:03,690 - processing.embedding - INFO - 3838 chunks valides à traiter sur 3838 total
+Génération embeddings: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 3838/3838 [2:15:58<00:00,  2.13s/it]
+2025-09-04 14:15:02,187 - processing.embedding - INFO - Embeddings générés avec succès : 3838/3838 chunks valides
+DIAGNOSTIC - Embeddings generated: 3838/3838 chunks
+DIAGNOSTIC - First embedding dimension: 768
+🧮 3838 embeddings générés
+2025-09-04 14:15:02,187 - __main__ - INFO - Type chunks_only: <class 'list'>, longueur: 3838
+2025-09-04 14:15:02,187 - __main__ - INFO - Type embeddings_only: <class 'list'>, longueur: 3838
+2025-09-04 14:15:02,187 - __main__ - INFO - Type premier chunk: <class 'processing.chunking.DocumentChunk'>
+2025-09-04 14:15:02,187 - __main__ - INFO - Type premier embedding: <class 'numpy.ndarray'>
+2025-09-04 14:15:02,187 - storage.vector_store - INFO - Index FAISS initialisé (dimension: 768)
+2025-09-04 14:15:02,187 - storage.vector_store - INFO - VectorStoreManager initialisé
+2025-09-04 14:15:02,231 - storage.vector_store - INFO - Ajout de 3838 embedded_chunks au vector store
+2025-09-04 14:15:02,257 - storage.vector_store - INFO - Ajouté 3838 embeddings à l'index (total: 3838)
+💾 Documents stockés dans le vector store
+
+🔍 Vérifications du Vector Store:
+- Impossible de récupérer le nombre de vecteurs
+- Méthode is_initialized() non disponible
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:02,257 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'test de fonctionnement...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:04,421 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.002s
+2025-09-04 14:15:04,421 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+- Test du retriever: 3 résultats
+==================================================
+2025-09-04 14:15:04,421 - __main__ - INFO - EvaluationMode initialisé avec questions_file: c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions.csv 
+
+🔬 MODE ÉVALUATION - 28 QUESTIONS DE TEST
+============================================================
+2025-09-04 14:15:04,428 - interface.evaluation_mode - INFO - VectorStore compatible (search_similar)
+📚 Traitement des questions depuis c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions.csv...
+2025-09-04 14:15:04,433 - interface.evaluation_mode - INFO - Colonnes disponibles dans CSV : ['Numero_identifiant', 'Question', 'Interet_scientifique_question', 'Typologie_question', 'Source_ideale_chercheuse', 'Reponse_ideale_chercheuse']
+2025-09-04 14:15:04,433 - interface.evaluation_mode - INFO - Mapping des colonnes utilisé : {'numero': 'Numero_identifiant', 'question': 'Question', 'interet_scientifique': 'Interet_scientifique_question', 'typologie': 'Typologie_question', 'source_ideale': 'Source_ideale_chercheuse', 'reponse_ideale': 'Reponse_ideale_chercheuse'}
+
+📄 Traitement de 28 questions...
+  [░░░░░░░░░░░░░░░░░░░░] Question  1/28 (  3.6%)2025-09-04 14:15:04,436 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'C'est le XX XXX XXXX. Nous commençons la quatrième journée de captation pour le projet d'XXXXXXX...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:06,563 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:06,563 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:06,640 - httpx - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-09-04 14:15:06,642 - generation.generator - INFO - Client Ollama initialisé avec le modèle llama3.1:latest
+2025-09-04 14:15:11,958 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:11,959 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:11,959 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [█░░░░░░░░░░░░░░░░░░░] Question  2/28 (  7.1%)2025-09-04 14:15:11,959 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après le fichier 20240627_XXXX_Prénom_Nom_entretien_FR, peux tu me donner la réponse de XXX...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:14,041 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:15:14,042 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:15,725 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:15,725 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:15,726 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [██░░░░░░░░░░░░░░░░░░] Question  3/28 ( 10.7%)2025-09-04 14:15:15,726 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Qui est Alan Turing ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:17,848 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.004s
+2025-09-04 14:15:17,848 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:19,739 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:19,740 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:19,740 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [██░░░░░░░░░░░░░░░░░░] Question  4/28 ( 14.3%)2025-09-04 14:15:19,740 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire qui est Alan Turing ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:21,836 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:15:21,836 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:23,336 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:23,336 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:23,337 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [███░░░░░░░░░░░░░░░░░] Question  5/28 ( 17.9%)2025-09-04 14:15:23,337 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelles personnes interviewées ont leur entretien en anglais et non en français ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:25,401 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:25,401 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:27,299 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:27,301 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:27,301 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [████░░░░░░░░░░░░░░░░] Question  6/28 ( 21.4%)2025-09-04 14:15:27,302 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire  quelles personnes interviewées ont leur entretien ...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:29,388 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:15:29,390 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:31,371 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:31,371 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:31,371 - generation.generator - INFO - Réponse générée avec succès - 2 sources citées uniques
+  [█████░░░░░░░░░░░░░░░] Question  7/28 ( 25.0%)2025-09-04 14:15:31,371 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'De quelle origine est Prénom Nom ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:33,482 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:33,482 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:35,609 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:35,610 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:35,610 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [█████░░░░░░░░░░░░░░░] Question  8/28 ( 28.6%)2025-09-04 14:15:35,610 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après le fichier 20240611_XXXX_Prénom_Nom_entretien_FR fourni, peux-tu me dire de quelle origine...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:37,673 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:37,673 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:38,743 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:38,743 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:38,743 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [██████░░░░░░░░░░░░░░] Question  9/28 ( 32.1%)2025-09-04 14:15:38,743 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quel était le premier produit d'XXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:40,860 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:15:40,861 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:43,202 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:43,203 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:43,203 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [███████░░░░░░░░░░░░░] Question 10/28 ( 35.7%)2025-09-04 14:15:43,204 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quel était le premier produit d'XXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:45,278 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:45,279 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:46,676 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:46,677 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:46,677 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [███████░░░░░░░░░░░░░] Question 11/28 ( 39.3%)2025-09-04 14:15:46,677 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelles personnes interviewées parlent du XXXXXXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:48,787 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:48,788 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:49,876 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:49,877 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:49,877 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [████████░░░░░░░░░░░░] Question 12/28 ( 42.9%)2025-09-04 14:15:49,877 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quelles personnes interviewées parlent du XXXXX...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:51,944 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:51,944 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:15:56,929 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:15:56,930 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:15:56,931 - generation.generator - INFO - Réponse générée avec succès - 2 sources citées uniques
+  [█████████░░░░░░░░░░░] Question 13/28 ( 46.4%)2025-09-04 14:15:56,931 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelles personnes interviewées mentionnent la XXXXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:15:59,021 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:15:59,021 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:01,541 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:01,542 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:01,542 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [██████████░░░░░░░░░░] Question 14/28 ( 50.0%)2025-09-04 14:16:01,542 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quelles personnes interviewées mentionnent la XXX...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:03,607 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:03,607 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:04,930 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:04,930 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:04,930 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [██████████░░░░░░░░░░] Question 15/28 ( 53.6%)2025-09-04 14:16:04,931 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'En quelle année est né Prénom Nom ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:07,049 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:07,049 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:07,990 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:07,991 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:07,991 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [███████████░░░░░░░░░] Question 16/28 ( 57.1%)2025-09-04 14:16:07,991 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après le fichier 20240626_XXXX_Prénom_Nom_entretien_FR fourni, peux-tu me dire en quelle ann...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:10,066 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:10,066 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:11,841 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:11,842 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:11,842 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [████████████░░░░░░░░] Question 17/28 ( 60.7%)2025-09-04 14:16:11,842 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'En quelles années est né le XX selon Prénom Nom ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:13,959 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:13,959 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:16,865 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:16,865 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:16,866 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [████████████░░░░░░░░] Question 18/28 ( 64.3%)2025-09-04 14:16:16,866 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après le fichier 20240611_XXXX_Prénom_Nom_entretien_FR fourni, peux-tu me dire en quelles a...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:18,925 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:16:18,925 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:22,397 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:22,398 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:22,398 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [█████████████░░░░░░░] Question 19/28 ( 67.9%)2025-09-04 14:16:22,398 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelle est l'année de naissance de chaque personne interviewée ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:24,469 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:24,469 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:26,291 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:26,291 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:26,291 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [██████████████░░░░░░] Question 20/28 ( 71.4%)2025-09-04 14:16:26,291 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quelle est l'année de naissance de chaque personne ...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:28,329 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:28,330 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:30,964 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:30,964 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:30,964 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [███████████████░░░░░] Question 21/28 ( 75.0%)2025-09-04 14:16:30,964 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelle personne interviewée a ouvert le site d'XXXX à XXXXX en XXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:33,115 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:16:33,115 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:34,095 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:34,095 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:34,095 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [███████████████░░░░░] Question 22/28 ( 78.6%)2025-09-04 14:16:34,095 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quelle personne interviewée a ouvert le site d'XXXX...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:36,196 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:16:36,197 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:37,197 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:37,197 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:37,197 - generation.generator - INFO - Réponse générée avec succès - 0 sources citées uniques
+  [████████████████░░░░] Question 23/28 ( 82.1%)2025-09-04 14:16:37,197 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelle personne interviewée a indiqué l'année de naissance la plus ancienne ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:39,325 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:39,325 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:40,830 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:40,831 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:40,831 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [█████████████████░░░] Question 24/28 ( 85.7%)2025-09-04 14:16:40,831 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quelle personne interviewée a indiqué l'année de na...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:42,891 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:42,892 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:47,077 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:47,078 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:47,078 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [█████████████████░░░] Question 25/28 ( 89.3%)2025-09-04 14:16:47,078 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelle personne interviewée a passé le plus d'années chez XXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:49,133 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:49,133 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:51,205 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:51,206 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:51,206 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [██████████████████░░] Question 26/28 ( 92.9%)2025-09-04 14:16:51,207 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quelle personne interviewée a travaillé le plus de ...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:53,306 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.000s
+2025-09-04 14:16:53,306 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:16:55,852 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:16:55,853 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:16:55,853 - generation.generator - INFO - Réponse générée avec succès - 1 sources citées uniques
+  [███████████████████░] Question 27/28 ( 96.4%)2025-09-04 14:16:55,854 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'Quelles sont les différentes appellations d'XXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:16:57,954 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:16:57,954 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:17:00,616 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:17:00,616 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:17:00,616 - generation.generator - INFO - Réponse générée avec succès - 2 sources citées uniques
+  [████████████████████] Question 28/28 (100.0%)
+2025-09-04 14:17:00,616 - retrieval.retriever - INFO - Recherche de chunks pour la requête : 'D'après les 19 fichiers fournis, peux-tu me dire quelles sont les différentes appellations d'XXXX ?...'
+DIAGNOSTIC - Query embedding generated: 768 dimensions
+DIAGNOSTIC - Index ntotal: 3838
+DIAGNOSTIC - Metadata count: 3838
+DIAGNOSTIC - Total vectors: 3838
+2025-09-04 14:17:02,685 - storage.vector_store - INFO - Recherche terminée : 3 résultats en 0.001s
+2025-09-04 14:17:02,685 - retrieval.retriever - INFO - Récupéré 3 chunks pertinents
+2025-09-04 14:17:06,201 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-09-04 14:17:06,202 - generation.generator - INFO - Réponse générée avec succès
+2025-09-04 14:17:06,202 - generation.generator - INFO - Réponse générée avec succès - 2 sources citées uniques
+
+💾 Export des résultats...
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Début de l'export des résultats d'évaluation (nouveau fichier)
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Chargement du fichier CSV original : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions.csv  
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Validation de la structure du fichier CSV
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Structure du fichier CSV validée avec succès
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Fichier CSV original chargé avec succès : 28 questions
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Validation de la structure du fichier CSV
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Structure du fichier CSV validée avec succès
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Questions dans le fichier original: 28
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Résultats à traiter: 28
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Nom du fichier de résultats : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions_results_llama3_1_latest_300_10_nomic-embed-text_latest_3_20250904_141706.csv
+2025-09-04 14:17:06,202 - export.csv_writer - INFO - Création du DataFrame de résultats
+2025-09-04 14:17:06,207 - export.csv_writer - INFO - En-têtes de colonnes créés : llama3_1_latest_300_10_nomic-embed-text_latest_3_sources, llama3_1_latest_300_10_nomic-embed-text_latest_3_f1, llama3_1_latest_300_10_nomic-embed-text_latest_3_responses, llama3_1_latest_300_10_nomic-embed-text_latest_3_manual, llama3_1_latest_300_10_nomic-embed-text_latest_3_cited_sources, llama3_1_latest_300_10_nomic-embed-text_latest_3_cited_f1
+2025-09-04 14:17:06,208 - export.csv_writer - INFO - DataFrame de résultats créé avec 6 nouvelles colonnes
+2025-09-04 14:17:06,208 - export.csv_writer - INFO - Sauvegarde du fichier de résultats : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions_results_llama3_1_latest_300_10_nomic-embed-text_latest_3_20250904_141706.csv
+2025-09-04 14:17:06,216 - export.csv_writer - INFO - Fichier de résultats sauvegardé avec succès
+2025-09-04 14:17:06,216 - export.csv_writer - INFO - Export terminé avec succès : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions_results_llama3_1_latest_300_10_nomic-embed-text_latest_3_20250904_141706.csv
+
+âœ… Fichier original préservé : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions.csv
+ðŸ“Š Résultats exportés vers : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions_results_llama3_1_latest_300_10_nomic-embed-text_latest_3_20250904_141706.csv
+
+============================================================
+           STATISTIQUES FINALES DE L'ÉVALUATION
+============================================================
+📊 Questions traitées      : 28/28
+⚠️ Erreurs rencontrées    : 0
+🎯 Score F1 moyen         : 0.457
+⏱️ Temps total           : 0:02:01.788804
+⚡ Temps moyen/question   : 4.35s
+🎯 Score F1 sources citées : 0.799
+
+🔧 Configuration utilisée :
+   • Modèle LLM          : llama3.1:latest
+   • Chunk Size          : 300
+   • Chunk Overlap       : 10
+   • Modèle Embedding    : nomic-embed-text:latest
+   • Top-K               : 3
+
+📈 Répartition des scores F1 :
+   • Excellent (≥ 0.8)    :  0 questions ( 0.0%)
+   • Bon (0.6-0.8)        :  4 questions (33.3%)
+   • Moyen (0.4-0.6)      :  4 questions (33.3%)
+   • Faible (< 0.4)       :  4 questions (33.3%)
+
+📈 Répartition des scores F1 sources citées :
+   • Excellent (≥ 0.8)    :  8 questions (80.0%)
+   • Bon (0.6-0.8)        :  0 questions ( 0.0%)
+   • Moyen (0.4-0.6)      :  0 questions ( 0.0%)
+   • Faible (< 0.4)       :  2 questions (20.0%)
+============================================================
+
+✅ Mode évaluation terminé avec succès !
+
+Résultats exportés dans : c:\Users\BenedicteTuza\Documents\RAG-prototype\src\questions_results_llama3_1_latest_300_10_nomic-embed-text_latest_3_20250904_141706.csv
+
+============================================================
+           MENU PRINCIPAL - PROTOTYPE RAG ELCA
+============================================================
+1. Mode Évaluation (28 questions de test)
+   → Traitement automatisé du fichier questions.csv
+   → Évaluation de différents paramétrages
+
+2. Mode Chatbot (questions libres)
+   → Interface interactive en ligne de commande
+   → Questions libres sur le corpus d'archives
+
+3. Quitter le programme
+============================================================
+
+Veuillez choisir un mode (1, 2 ou 3) :
